@@ -1,0 +1,125 @@
+/* 全体設定 */
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%; /* 高さを画面いっぱいに設定 */
+    display: flex; /* コンテンツを中央に配置する準備 */
+    flex-direction: column; /* コンテンツを縦方向に並べる */
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  .home-container {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* ヘッダー */
+  .header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header h2 {
+    margin: 0;
+    color: #ffffff;
+  }
+  
+  .logout-button {
+    margin-right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 4px 16px;
+  }
+  
+  .login-link {
+    color: white;
+    text-decoration: none;
+  }
+
+  .user-info {
+    text-align: right; /* テキストを右寄せ */
+    margin-top: 50px; /* 適宜マージンを調整 */
+  }
+  
+  .user-info a {
+    color: #007BFF;
+    text-decoration: none;
+    margin-right: 10px; /* リンクとテキストの間隔を調整 */
+  }
+  
+  .user-info span {
+    font-weight: bold;
+    margin-right: 10px; /* リンクとテキストの間隔を調整 */
+  }
+  
+  
+  .ranking-container {
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    margin: 20px;
+  }
+  
+  /* ランキング項目 */
+  .ranking-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .ranking-item {
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* 上位3位にグラデーションを追加 */
+  .ranking-item.top-ranking-1,.top-ranking-2,.top-ranking-3{
+    background: linear-gradient(to right, #ffffff, #ffffff00); /* 金色のグラデーション */
+    color: #333;
+    font-style: italic;
+    font-weight: bold;
+    font-size: large;
+  }
+ 
+  
+  /* クイズボタン */
+  .quiz-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .quiz-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #7D92FD;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  

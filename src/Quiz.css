@@ -1,0 +1,138 @@
+/* 全体設定 */
+.quiz-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header h2 {
+    margin: 0;
+  }
+  
+  .logout-button {
+    margin-right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 4px 16px;
+  }
+  
+  .login-link {
+    color: white;
+    text-decoration: none;
+  }
+
+
+  .user-info {
+    text-align: right; /* テキストを右寄せ */
+    margin-top: 80px; /* 適宜マージンを調整 */
+  }
+  
+  .user-info a {
+    color: #007BFF;
+    text-decoration: none;
+    margin-right: 10px; /* リンクとテキストの間隔を調整 */
+  }
+  
+  .user-info span {
+    font-weight: bold;
+    margin-right: 10px; /* リンクとテキストの間隔を調整 */
+  }
+  
+  .upload-container {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .upload-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .cloud-icon {
+    font-size: 64px;
+    color: #00c3ff;
+  }
+  
+  .file-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+  }
+  
+  .file-label input {
+    display: none;
+  }
+  
+  .upload-text {
+    margin-top: 0px;
+  }
+  
+  .loading-text {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  .quiz-options button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #7D92FD;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    margin: 10px 5px;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
