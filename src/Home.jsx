@@ -50,7 +50,7 @@ const Home = () => {
   // スタイルを動的に設定
   const rankingTitleStyle = {
     position: "relative",
-    top: user ? "0px" : "60px", // ログイン状態によってtopを調整
+    top: user ? "0px" : "65px", // ログイン状態によってtopを調整
   };
   return (
     <>
@@ -61,7 +61,10 @@ const Home = () => {
       {/* Header */}
       <header className="header">
         <div className="header-content">
+        <Link to="/" className="site-name">
+          <img src="/src/assets/icon-correct-24-1.png" alt="icon" className="site-icon" />
           <h2>CloudQuest</h2>
+        </Link>
           {user ? (
             <button className="logout-button" onClick={handleLogout}>
               ログアウト
@@ -83,7 +86,7 @@ const Home = () => {
 
       )}
       {/* Hero Section */}
-      <div className="hero-section">
+      <div className="hero-section" style={rankingTitleStyle}>
         <div className="hero-text">
           <h1>クイズで学び、</h1>
           <h1>ランキングで競おう！</h1>

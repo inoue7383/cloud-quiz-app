@@ -183,6 +183,10 @@ const Quiz = () => {
       {/* Header */}
       <header className="header">
         <div className="header-content">
+        <Link to="/" className="site-name">
+          <img src="/src/assets/icon-correct-24-1.png" alt="icon" className="site-icon" />
+          <h2>CloudQuest</h2>
+        </Link>
           <h2>CloudQuest</h2>
           {user ? (
             <button className="logout-button" onClick={handleLogout}>
