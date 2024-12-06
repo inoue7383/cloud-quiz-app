@@ -11,6 +11,43 @@ html, body, #root {
   *, *::before, *::after {
     box-sizing: border-box;
   }
+  .hero-section {
+    background-image: url("/src/assets/background.jpg"); /* 背景画像を指定 */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+  }
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 300px; /* 必要に応じて高さを調整 */
+    background-image: url("/src/assets/background.jpg"); /* 背景画像を設定 */
+    background-size: cover;
+    background-position: center;
+  }
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒色 */
+    z-index: 1;
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* テキストに影を追加 */
+  }
+
+  .hero-text h3 {
+    font-size: rem;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* テキストに影を追加 */
+  }
   
   .home-container {
     font-family: Arial, sans-serif;

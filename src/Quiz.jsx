@@ -7,6 +7,8 @@ import { signOut } from "firebase/auth";
 import { Link } from "react-router-dom";
 import "./Quiz.css"; // CSSファイルのインポート
 import { IoMdCloudUpload } from "react-icons/io";
+import { Helmet } from "react-helmet";
+
 
 const Quiz = () => {
   const [model, setModel] = useState(null);
@@ -172,6 +174,10 @@ const Quiz = () => {
   };
 
   return (
+    <>
+    <Helmet>
+    <title>CloudQuest - この雲は何かな？</title>
+    </Helmet>
     <div className="quiz-container">
 
       {/* Header */}
@@ -226,6 +232,7 @@ const Quiz = () => {
       )}
       <button onClick={handleExit}>HOMEに戻る</button>
     </div>
+  </>
   );
 };
 

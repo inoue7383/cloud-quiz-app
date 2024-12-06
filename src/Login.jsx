@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { auth } from "./firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
+import "./Login.css";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -20,6 +22,10 @@ const Login = () => {
   };
 
   return (
+    <>
+    <Helmet>
+    <title>CloudQuest - ログイン</title>
+    </Helmet>
     <div className="auth-container">
       <h2>ログイン</h2>
       {error && <p className="error-message">{error}</p>}
@@ -46,6 +52,7 @@ const Login = () => {
         新規登録が必要ですか？ <Link to="/signup">こちら</Link> から新規登録できます。
       </p>
     </div>
+  </>
   );
 };
 

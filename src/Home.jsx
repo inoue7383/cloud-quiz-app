@@ -4,6 +4,7 @@ import { signOut, onAuthStateChanged } from "firebase/auth";
 import { collection, getDocs, doc, getDoc } from "firebase/firestore";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const [user, setUser] = useState(null); // Logged-in user info
@@ -52,6 +53,10 @@ const Home = () => {
     top: user ? "0px" : "60px", // ログイン状態によってtopを調整
   };
   return (
+    <>
+    <Helmet>
+    <title>CloudQuest - ホーム</title>
+    </Helmet>
     <div className="home-container">
       {/* Header */}
       <header className="header">
@@ -77,7 +82,23 @@ const Home = () => {
         </div>
 
       )}
-
+      {/* Hero Section */}
+      <div className="hero-section">
+        <div className="hero-text">
+          <h1>クイズで学び、</h1>
+          <h1>ランキングで競おう！</h1>
+          <h3>AIと作る自分だけの教材</h3>
+          {user ? (
+            <Link to="/quiz" className="quiz-button">
+              クイズに挑戦
+            </Link>
+          ) : (
+            <Link to="/Login" className="quiz-button">
+              まずはログインしよう
+            </Link>
+          )}
+        </div>
+      </div>
       {/* Ranking Section */}
       <h2 className="ranking-title" style={rankingTitleStyle}>総合ランキング</h2>
       <div className="ranking-container" style={rankingTitleStyle}>
@@ -118,6 +139,7 @@ const Home = () => {
         </Link>
     )}
     </div>
+    </>
   );
 };
 

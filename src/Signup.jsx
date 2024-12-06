@@ -4,6 +4,8 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
+import { Helmet } from "react-helmet";
+
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,6 +29,10 @@ const Signup = () => {
   };
 
   return (
+    <>
+    <Helmet>
+    <title>CloudQuest - サインアップ</title>
+    </Helmet>
     <div className="auth-container">
       <h2>新規登録</h2>
       {error && <p className="error-message">{error}</p>}
@@ -53,6 +59,7 @@ const Signup = () => {
         すでにアカウントをお持ちですか？ <Link to="/login">こちら</Link> からログインしてください。
       </p>
     </div>
+  </>
   );
 };
 
