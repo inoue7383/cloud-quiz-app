@@ -62,7 +62,7 @@ const Home = () => {
       <header className="header">
         <div className="header-content">
         <Link to="/" className="site-name">
-          <img src="/assets/icon-correct-24-1.png" alt="icon" className="site-icon" />
+          <div className="site-icon"></div>
           <h2>CloudQuest</h2>
         </Link>
           {user ? (
@@ -76,7 +76,6 @@ const Home = () => {
           )}
         </div>
       </header>
-          
       {/* User Info */}
       {user && (
         <div className="user-info">

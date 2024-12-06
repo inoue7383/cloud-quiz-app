@@ -36,6 +36,9 @@
     width: 45px; /* アイコンのサイズ */
     height: 45px;
     margin-right: 10px; /* アイコンとテキストの間の余白 */
+    background-image: url("/src/assets/icon-correct-24-1.png"); /* 背景画像を設定 */
+    background-size: cover; /* アイコン全体に画像をフィットさせる */
+    background-position: center; /* 画像の中心を表示 */
   }
   
   .logout-button {
